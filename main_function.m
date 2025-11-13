@@ -352,7 +352,7 @@ out010=cumsum(out10,2); %накопленный отклик долговой н
 figure(1);
  subplot(4,3,1)
   temp01=out1(:,:,1);
-  temp1=squeeze(prctile(temp01,[32 68],1))';
+  temp1=squeeze(prctile(temp01,[16 84],1))';
   temp11=squeeze(prctile(temp01,50,1))';
   plot(temp1(L+1:L+25,:), '--', 'Color',"#7E2F8E", 'LineWidth',1);
   hold on
@@ -364,7 +364,7 @@ figure(1);
 
  subplot(4,3,2)
   temp02=out1(:,:,2);
-  temp2=squeeze(prctile(temp02,[32 68],1))';
+  temp2=squeeze(prctile(temp02,[16 84],1))';
   temp22=squeeze(prctile(temp02,50,1))';
   plot(temp2(L+1:L+20,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -376,7 +376,7 @@ figure(1);
 
  subplot(4,3,3)
   temp03=out1(:,:,3);
-  temp3=squeeze(prctile(temp03,[32 68],1))';
+  temp3=squeeze(prctile(temp03,[16 84],1))';
   temp33=squeeze(prctile(temp03,50,1))';
   plot(temp3(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -388,7 +388,7 @@ figure(1);
 
  subplot(4,3,4)
   temp04=out1(:,:,4);
-  temp4=squeeze(prctile(temp04,[32 68],1))';
+  temp4=squeeze(prctile(temp04,[16 84],1))';
   temp44=squeeze(prctile(temp04,50,1))';
   plot(temp4(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -401,7 +401,7 @@ figure(1);
  subplot(4,3,5)
   temp05=out1(:,:,6);
   %temp05=out01(:,:,1);
-  temp5=squeeze(prctile(temp05,[32 68],1))';
+  temp5=squeeze(prctile(temp05,[16 84],1))';
   temp55=squeeze(prctile(temp05,50,1))';
   plot(temp5(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -414,7 +414,7 @@ figure(1);
  subplot(4,3,6)
   temp06=u*out1(:,:,5)-v*out1(:,:,6);
   %temp06=out01(:,:,2);
-  temp6=squeeze(prctile(temp06,[32 68],1))';
+  temp6=squeeze(prctile(temp06,[16 84],1))';
   temp66=squeeze(prctile(temp06,50,1))';
   plot(temp6(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -426,7 +426,7 @@ figure(1);
 
  subplot(4,3,7)
   temp012=out1(:,:,5);
-  temp12=squeeze(prctile(temp012,[32 68],1))';
+  temp12=squeeze(prctile(temp012,[16 84],1))';
   temp1212=squeeze(prctile(temp012,50,1))';
   plot(temp12(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -438,7 +438,7 @@ figure(1);
 
  subplot(4,3,8)
   temp07=(a/(a+b+c))*(out1(:,:,5)+out01(:,:,1))+(b/(a+b+c))*out1(:,:,6)+(c/(a+b+c))*(u*out1(:,:,5)-v*out1(:,:,6)+out01(:,:,1))-out1(:,:,3);
-  temp7=squeeze(prctile(temp07,[32 68],1))';
+  temp7=squeeze(prctile(temp07,[16 84],1))';
   temp77=squeeze(prctile(temp07,50,1))';
   plot(temp7(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -450,7 +450,7 @@ figure(1);
 
  subplot(4,3,9)
   temp08=cumsum((a/(a+b+c))*(out1(:,:,5)+out01(:,:,1))+(b/(a+b+c))*out1(:,:,6)+(c/(a+b+c))*(u*out1(:,:,5)-v*out1(:,:,6)+out01(:,:,1))-out1(:,:,3),2);
-  temp8=squeeze(prctile(temp08,[32 68],1))';
+  temp8=squeeze(prctile(temp08,[16 84],1))';
   temp88=squeeze(prctile(temp08,50,1))';
   plot(temp8(L+1:L+37,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -472,7 +472,7 @@ figure(1);
 figure(2);
  subplot(4,3,1)
   temp01=out1(:,:,1);
-  temp1=squeeze(prctile(temp01,[32 68],1))';
+  temp1=squeeze(prctile(temp01,[16 84],1))';
   temp11=squeeze(prctile(temp01,50,1))';
   plot(temp1(L+1:L+25,:), '--', 'Color',"#7E2F8E", 'LineWidth',1);
   hold on
@@ -484,7 +484,7 @@ figure(2);
 
  subplot(4,3,2)
   temp02=out1(:,:,2);
-  temp2=squeeze(prctile(temp02,[32 68],1))';
+  temp2=squeeze(prctile(temp02,[16 84],1))';
   temp22=squeeze(prctile(temp02,50,1))';
   plot(temp2(L+1:L+20,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -496,7 +496,7 @@ figure(2);
 
  subplot(4,3,3)
   temp03=out1(:,:,3);
-  temp3=squeeze(prctile(temp03,[32 68],1))';
+  temp3=squeeze(prctile(temp03,[16 84],1))';
   temp33=squeeze(prctile(temp03,50,1))';
   plot(temp3(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -508,7 +508,7 @@ figure(2);
 
  subplot(4,3,4)
   temp04=out1(:,:,4);
-  temp4=squeeze(prctile(temp04,[32 68],1))';
+  temp4=squeeze(prctile(temp04,[16 84],1))';
   temp44=squeeze(prctile(temp04,50,1))';
   plot(temp4(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -520,7 +520,7 @@ figure(2);
 
  subplot(4,3,5)
   temp05=out1(:,:,5);
-  temp5=squeeze(prctile(temp05,[32 68],1))';
+  temp5=squeeze(prctile(temp05,[16 84],1))';
   temp55=squeeze(prctile(temp05,50,1))';
   plot(temp5(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -532,7 +532,7 @@ figure(2);
 
  subplot(4,3,6)
   temp06=out01(:,:,1)+out1(:,:,5)-out1(:,:,3);
-  temp6=squeeze(prctile(temp06,[32 68],1))';
+  temp6=squeeze(prctile(temp06,[16 84],1))';
   temp66=squeeze(prctile(temp06,50,1))';
   plot(temp6(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -544,7 +544,7 @@ figure(2);
 
  subplot(4,3,7)
   temp07=cumsum(out01(:,:,1)+out1(:,:,5)-out1(:,:,3),2);
-  temp7=squeeze(prctile(temp07,[32 68],1))';
+  temp7=squeeze(prctile(temp07,[16 84],1))';
   temp77=squeeze(prctile(temp07,50,1))';
   plot(temp7(L+1:L+37,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -558,7 +558,7 @@ figure(2);
 figure(3);
  subplot(4,3,1)
   temp01=out1(:,:,1);
-  temp1=squeeze(prctile(temp01,[32 68],1))';
+  temp1=squeeze(prctile(temp01,[16 84],1))';
   temp11=squeeze(prctile(temp01,50,1))';
   plot(temp1(L+1:L+25,:), '--', 'Color',"#7E2F8E", 'LineWidth',1);
   hold on
@@ -570,7 +570,7 @@ figure(3);
 
  subplot(4,3,2)
   temp02=out1(:,:,2);
-  temp2=squeeze(prctile(temp02,[32 68],1))';
+  temp2=squeeze(prctile(temp02,[16 84],1))';
   temp22=squeeze(prctile(temp02,50,1))';
   plot(temp2(L+1:L+20,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -582,7 +582,7 @@ figure(3);
 
  subplot(4,3,3)
   temp03=out1(:,:,3);
-  temp3=squeeze(prctile(temp03,[32 68],1))';
+  temp3=squeeze(prctile(temp03,[16 84],1))';
   temp33=squeeze(prctile(temp03,50,1))';
   plot(temp3(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -594,7 +594,7 @@ figure(3);
 
  subplot(4,3,4)
   temp04=out1(:,:,4);
-  temp4=squeeze(prctile(temp04,[32 68],1))';
+  temp4=squeeze(prctile(temp04,[16 84],1))';
   temp44=squeeze(prctile(temp04,50,1))';
   plot(temp4(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -607,7 +607,7 @@ figure(3);
  subplot(4,3,5)
   temp05=out1(:,:,6);
   %temp05=out01(:,:,1);
-  temp5=squeeze(prctile(temp05,[32 68],1))';
+  temp5=squeeze(prctile(temp05,[16 84],1))';
   temp55=squeeze(prctile(temp05,50,1))';
   plot(temp5(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -620,7 +620,7 @@ figure(3);
  subplot(4,3,6)
   temp06=u*out1(:,:,5)-v*out1(:,:,6);
   %temp06=out01(:,:,2);
-  temp6=squeeze(prctile(temp06,[32 68],1))';
+  temp6=squeeze(prctile(temp06,[16 84],1))';
   temp66=squeeze(prctile(temp06,50,1))';
   plot(temp6(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -632,7 +632,7 @@ figure(3);
 
  subplot(4,3,7)
   temp07=(e/(e+f))*out1(:,:,6)+(f/(e+f))*(u*out1(:,:,5)-v*out1(:,:,6)+out01(:,:,1))-out1(:,:,3);
-  temp7=squeeze(prctile(temp07,[32 68],1))';
+  temp7=squeeze(prctile(temp07,[16 84],1))';
   temp77=squeeze(prctile(temp07,50,1))';
   plot(temp7(L+1:L+15,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
@@ -644,7 +644,7 @@ figure(3);
 
  subplot(4,3,8)
   temp08=cumsum((e/(e+f))*out1(:,:,6)+(f/(e+f))*(u*out1(:,:,5)-v*out1(:,:,6)+out01(:,:,1))-out1(:,:,3),2);
-  temp8=squeeze(prctile(temp08,[32 68],1))';
+  temp8=squeeze(prctile(temp08,[16 84],1))';
   temp88=squeeze(prctile(temp08,50,1))';
   plot(temp8(L+1:L+37,:), '--', 'Color',"#7E2F8E", 'LineWidth',1 );
   hold on
